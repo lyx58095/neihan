@@ -1,10 +1,16 @@
 package com.lyx.bean;
 
+import java.io.Serializable;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class UserEntity {
+public class UserEntity implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1984018371741834589L;
 	//头像网址
 	private String avatarUrl;
 	private long userId;
@@ -12,6 +18,22 @@ public class UserEntity {
 	//用户是否验证
 	private boolean userVerified;
 	
+	public String getAvatarUrl() {
+		return avatarUrl;
+	}
+
+	public long getUserId() {
+		return userId;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public boolean isUserVerified() {
+		return userVerified;
+	}
+
 	public void parseJson(JSONObject json) throws JSONException{
 		if(json != null){
 			avatarUrl = json.getString("avatar_url");

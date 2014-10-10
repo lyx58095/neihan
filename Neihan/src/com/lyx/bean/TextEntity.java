@@ -1,5 +1,7 @@
 package com.lyx.bean;
 
+import java.io.Serializable;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -9,8 +11,12 @@ import org.json.JSONObject;
  * @author lenovo
  *
  */
-public class TextEntity {
+public class TextEntity implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -3755990600052452983L;
 	private int type;
 	private long createTime;
 	private int favoriteCount;

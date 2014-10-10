@@ -1,5 +1,6 @@
 package com.lyx.bean;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,8 +8,12 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class ImageUrlList {
+public class ImageUrlList implements Serializable{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -8282193541419112384L;
 	private List<String> largeImageUrls;
 	private String uri;
 	private int width;

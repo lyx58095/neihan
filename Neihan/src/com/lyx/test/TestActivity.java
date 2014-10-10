@@ -40,8 +40,8 @@ public class TestActivity extends Activity implements Response.Listener<String> 
 	public static final int CATEGORY_TEXT = 1;
 	public static final int CATEGORY_IMAGE = 2;
 	private RequestQueue queue;
-	private Button button;
 	private long lastTime = 0;
+	private Button button;
 	private int offset = 0;
 
 	@Override
